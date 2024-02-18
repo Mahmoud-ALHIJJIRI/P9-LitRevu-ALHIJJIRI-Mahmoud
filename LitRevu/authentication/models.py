@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
+
 class User(AbstractUser):
 
     CREATOR = 'CREATOR'
@@ -11,7 +12,7 @@ class User(AbstractUser):
         (SUBSCRIBER, 'SUBSCRIBER')
     )
 
-    profile_photo = models.ImageField()
-    role = models.CharField(max_length=30, choices=ROLE_CHOICES)
+    profile_photo = models.ImageField(verbose_name="profile picture")
+    role = models.CharField(max_length=30, choices=ROLE_CHOICES, verbose_name="Role")
 
 
