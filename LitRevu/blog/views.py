@@ -6,7 +6,7 @@ from django.contrib import messages
 
 @login_required
 def home(request):
-    return render(request, 'blog/home.html')
+    return render(request, "blog/home.html")
 
 
 @login_required
@@ -22,7 +22,7 @@ def create_ticket(request):
 
             messages.success(request, "Ticket créé avec succès.")
 
-            return redirect("blog:flux")
+            return redirect("blog:home")
         else:
             messages.error(
                 request,
