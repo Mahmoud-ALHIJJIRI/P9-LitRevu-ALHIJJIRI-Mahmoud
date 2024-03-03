@@ -5,7 +5,7 @@ from authentication.models import User
 
 
 class AuthAdmin(admin.ModelAdmin):
-    list_display = ("id", "username", "role", "is_superuser")
+    list_display = ("id", "username", "role")
 
 
 admin.site.register(User, AuthAdmin)
